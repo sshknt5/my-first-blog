@@ -1,18 +1,156 @@
-<html>
-    <head>
-        <title>Web Tech</title>
-    </head>
-    <body>
-        <div>
-    <h1><a href="/">Django Girls Blog</a></h1>
-	</div>
+<!DOCTYPE html>
+<html lang="en">
 
-	{% for post in posts %}
-    <div>
-        <p>published: {{ post.published_date }}</p>
-        <h2><a href="">{{ post.title }}</a></h2>
-        <p>{{ post.text|linebreaksbr }}</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My HTML Project</title>
+</head>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Baloo Bhai 2', cursive;
+        margin: 0px;
+        padding: 0px;
+        background-image: url("https://i.ibb.co/HVGkGGw/5.jpg");
+        color: white;
+    }
+
+    .left {
+        border: 2px;
+        display: inline-block;
+        position: absolute;
+        left: 34px;
+        top: 20px;
+    }
+
+    .left img {
+        width: 30%;
+    }
+
+
+
+    .right {
+
+        display: inline-block;
+        position: absolute;
+        right: 34px;
+        top: 20px;
+
+    }
+
+    .mid {
+        display: block;
+        width: 46%;
+        margin: 19px auto;
+        border: 2px solid;
+
+
+    }
+
+    .navbar {
+        display: inline-block;
+    }
+
+    .navbar li {
+        display: inline-block;
+        font-size: 15px;
+    }
+
+    .navbar li a {
+        color: white;
+        text-decoration: none;
+        padding: 14px 39px;
+    }
+
+    .navbar li a:hover {
+        text-decoration: underline;
+        color: purple;
+    }
+
+    .btn {
+        margin: 15px 15px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: grey;
+    }
+
+    .container {
+        border: 2px solid black;
+        width: 35%;
+        margin: 56px 75px;
+        padding: 27px 38px;
+        border-radius: 10px;
+    }
+
+    .form-group input{
+        text-align: center;
+        display: block;
+        width:340px;
+        padding:6px;
+        border:2px solid black;
+        border-radius: 10px;
+        margin: 3px auto;
+    }
+
+    .container h1{
+        text-align: center;
+    }
+
+    .container .btn{
+        display:block;
+        width:23%;
+        margin:30px auto;
+    }
+</style>
+
+<body>
+    <header class="header">
+
+        <div class="left">
+            <img src="https://i.ibb.co/6DzTV0y/2.png" alt="">
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Address</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn">
+                Call us
+            </button><button class="btn">
+                Email now
+            </button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>
+            Join us now!
+        </h1>
+        <div class="form-group">
+            <input type="text" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Enter your stream">
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Enter your roll no.">
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Enter your current semester">
+        </div>
+        <button class="btn">
+            Submit
+        </button>
     </div>
-{% endfor %}
-    </body>
+
+</body>
+
 </html>
